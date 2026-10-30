@@ -1,0 +1,18 @@
+appId: com.verminal.app
+productName: Verminal
+directories:
+  output: dist
+files:
+  - out/**
+  - package.json
+extraResources:
+  - from: resources
+    to: res
+asarUnpack:
+  - node_modules/@lydell/**
+win:
+  target: [nsis, portable]
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  include: build/installer.nsh
